@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity(), BookAdapter.OnListClickListener {
         }
     }
 
-
     override fun onClick(book: Book) {
         bookDetailsFragment.setBook(book)
         Timber.d("OnClick (screenIsPortrait=" + screenIsPortrait!!.toString() + ")")

@@ -2,11 +2,9 @@ package fr.imta.louradour.library
 
 import android.content.Context
 import android.os.Bundle
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,13 +14,9 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import timber.log.Timber
-import java.util.*
 import kotlin.collections.ArrayList
 
 class BookListFragment : Fragment() {
-    companion object {
-        const val BOOKLIST_VAL = "BOOKLIST_STATE"
-    }
     val books: ArrayList<Book> = ArrayList()
 
     private var bookRecyclerView: RecyclerView? = null
