@@ -23,17 +23,18 @@ class BookDetailsFragment() : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_book_details, container, false)
 
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         titleTxtView = view.findViewById(R.id.book_details_title)
         coverImageView = view.findViewById(R.id.book_details_cover)
         priceTxtView = view.findViewById(R.id.book_details_price)
         synopsysTxtView = view.findViewById(R.id.book_details_synopsys)
         synopsysTxtView?.justificationMode = JUSTIFICATION_MODE_INTER_WORD
 
-        return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         refreshData()
     }
 
