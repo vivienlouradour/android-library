@@ -1,44 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:layout_marginTop="15dp"
-    >
+    android:layout_marginTop="5dp"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="62dp">
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
+    <LinearLayout
 
-        android:id="@+id/book_details_cover"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:id="@+id/book_details_title"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/book_details_price"/>
-
-    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="62dp">
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/book_details_cover"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+
+            android:scaleType="fitXY" />
 
         <TextView
+            android:id="@+id/book_details_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/book_details_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/book_details_synopsys"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:textStyle="italic"
-            android:id="@+id/book_details_synopsys"
-           />
-    </ScrollView>
-</LinearLayout>
+            android:textStyle="italic" />
+    </LinearLayout>
+</ScrollView>
