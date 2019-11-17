@@ -51,5 +51,8 @@ class MainActivity : AppCompatActivity(), BookAdapter.OnListClickListener {
                 .addToBackStack(BookDetailsFragment::class.java.name)
                 .commit()
         }
+        else{
+            bookDetailsFragment.refreshData()
+        }
     }
 }

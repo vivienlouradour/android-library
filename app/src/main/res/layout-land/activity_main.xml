@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="2"
     android:id="@+id/landscapeFrameLayout">
 
-    <FrameLayout
-        android:layout_width="402dp"
-        android:layout_height="match_parent"
-        android:id="@+id/leftContainer"
-        android:layout_gravity="start"
+    <LinearLayout
 
-        />
-    <FrameLayout
-        android:id="@+id/rightContainer"
-        android:layout_width="265dp"
-        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_gravity="end"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:id="@+id/leftContainer"
+        android:orientation="vertical"
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:id="@+id/rightContainer"
+        android:orientation="vertical"
  />
-</FrameLayout>
+</LinearLayout>

@@ -4,8 +4,11 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import timber.log.Timber
 
 class BookAdapter(private val context: Context, private val books: List<Book>) : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
@@ -22,7 +25,7 @@ class BookAdapter(private val context: Context, private val books: List<Book>) :
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         holder.titleItemView.text = books[position].title
         holder.priceItemView.text = books[position].getFormattedPrice()
-
+        Picasso.get().load(books[position].cover).into(holder.coverItemView)
         holder.bookItemView.setOnClickListener{
             listener!!.onClick(books[position])
         }
@@ -36,7 +39,7 @@ class BookAdapter(private val context: Context, private val books: List<Book>) :
 
         internal var titleItemView: TextView = bookItemView.findViewById<View>(R.id.book_title) as TextView
         internal var priceItemView: TextView = bookItemView.findViewById<View>(R.id.book_price) as TextView
-
+        internal var coverItemView: ImageView = bookItemView.findViewById(R.id.bookCover) as ImageView
     }
 
     interface OnListClickListener{
